@@ -9,12 +9,10 @@
 
 body {
   font-family: "Palatino", "URW Palladio L", serif;  
-  margin: .4%;
+  margin: .4% 5%; 
 }
 
 main {
-  /* width: 1400px; */
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 3%;
@@ -23,13 +21,12 @@ main {
 header {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: left;*/
   background-color: var(--dark);
   color: var(--light);
+  text-align: center;
 }
 
 header img {
-  /*vertical-align: middle;*/
   width: 100px;
   height: 100px;
   border-style: groove;
@@ -62,20 +59,40 @@ nav a {
   text-decoration: none;
 }
 
+.titles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.firstcard {
+  flex: 1 0 100%;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+} 
+
+.firstcard header {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.firstcard img {
+  width: 100%; 
+}
+
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  outline: solid red 2px;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
-/*.column {
-  flex: 1 1 300px;
-}
-*/
 .card {
-  flex: 1 0 300px;
+  flex: 1 0 100%;
   padding: 5px;
   border-style: solid;
   border-width: 1px;
@@ -89,5 +106,35 @@ nav a {
 }
 
 .card img {
-  width: 300px;
+  width: 100%; 
+}
+
+/* tablet */
+@media screen and (max-width: 1200px) {
+  /* .firstcard {
+    flex: 0 0 100%;
+  }
+   */
+  .card {
+    flex: 1 0 50%;
+  }
+
+ .card img {
+    width: 50%; 
+  } 
+
+}
+/* desktop */
+@media screen and (max-width: 768px) {
+  /* .firstcard {
+    flex: 0 0 100%;
+  } */
+  
+  .card {
+    flex: 1 0 100%;
+  }
+
+  .card img {
+    width: 100%; 
+  }
 }
