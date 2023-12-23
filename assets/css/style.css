@@ -12,18 +12,11 @@ body {
   margin: .4% 5%; 
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3%;
-}
-
 header {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--dark);
   color: var(--light);
-  text-align: center;
 }
 
 header img {
@@ -59,10 +52,23 @@ nav a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
 .titles {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  border-block: 5px solid black;
+  margin: 10px 0px;
+  text-align: center;
+  justify-content: center;
+}
+
+.paragraph {
+  text-align: left;
 }
 
 .firstcard {
@@ -72,69 +78,75 @@ nav a {
   border-width: 1px;
 } 
 
-.firstcard header {
-  text-align: center;
-  padding: 25px;
-  background-color: var(--dark);
-  color: var(--light);
-}
-
 .firstcard img {
   width: 100%; 
+  padding: 10%;
+  background-color: var(--dark);
 }
 
 .row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
 }
+
+.card {
+  display: flex;
+  flex: 1 0 50%;
+  justify-content: center;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  background-color: var(--dark);
+} 
+
+.card img {
+  width: 100%; 
+  padding: 5%;
+  background-color: var(--dark);
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 50%;
+  }
+
+  .card img {
+    width: 50%;
+  }
+}
+
+  @media screen and (max-width: 768px) {
+    .card {
+      flex: 100%;
+    }
+  
+    .card img {
+      width: 33%;
+    }
+  }
+
+/*
 
 .card {
   flex: 1 0 100%;
   padding: 5px;
   border-style: solid;
   border-width: 1px;
-}
-
-.card header {
-  text-align: center;
-  padding: 25px;
-  background-color: var(--dark);
-  color: var(--light);
+  width: 100%;
 }
 
 .card img {
   width: 100%; 
+  padding: 20%;
+  background-color: var(--dark);
 }
+*/
 
-/* tablet */
-@media screen and (max-width: 1200px) {
-  /* .firstcard {
-    flex: 0 0 100%;
-  }
-   */
-  .card {
-    flex: 1 0 50%;
-  }
 
- .card img {
-    width: 50%; 
-  } 
-
-}
-/* desktop */
-@media screen and (max-width: 768px) {
-  /* .firstcard {
-    flex: 0 0 100%;
-  } */
-  
-  .card {
-    flex: 1 0 100%;
-  }
-
-  .card img {
-    width: 100%; 
-  }
-}
+} 
