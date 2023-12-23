@@ -71,12 +71,18 @@ main {
   text-align: left;
 }
 
+/* projects_big image*/
 .firstcard {
   flex: 1 0 100%;
   padding: 5px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
 } 
+
+/*pseudo-class*/
+.firstcard:hover {
+  border-color: red;
+}
 
 .firstcard img {
   width: 100%; 
@@ -84,9 +90,11 @@ main {
   background-color: var(--dark);
 }
 
+/* smaller images*/
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex: 1 0 100%;
   justify-content: space-around;
   margin: 0 auto;
   padding: 5px;
@@ -97,20 +105,31 @@ main {
 .card {
   display: flex;
   flex: 1 0 50%;
-  justify-content: center;
+  justify-content: space-around;
   padding: 5px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   width: 100%;
   background-color: var(--dark);
 } 
 
 .card img {
   width: 100%; 
-  padding: 5%;
+  padding: 8%;
   background-color: var(--dark);
 }
 
+/*pseudo-class*/
+.card:hover {
+  border-color: red;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/*medium desktop*/
 @media screen and (max-width: 992px) {
   .card {
     width: 50%;
@@ -121,6 +140,7 @@ main {
   }
 }
 
+/*tablets*/
   @media screen and (max-width: 768px) {
     .card {
       flex: 100%;
@@ -130,23 +150,3 @@ main {
       width: 33%;
     }
   }
-
-/*
-
-.card {
-  flex: 1 0 100%;
-  padding: 5px;
-  border-style: solid;
-  border-width: 1px;
-  width: 100%;
-}
-
-.card img {
-  width: 100%; 
-  padding: 20%;
-  background-color: var(--dark);
-}
-*/
-
-
-} 
